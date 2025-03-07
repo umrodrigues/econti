@@ -1,0 +1,26 @@
+.container {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+    height: 200px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .blue {
+    color: #3498db;
+  }
+  
+  .black {
+    color: #000;
+  }
+  
