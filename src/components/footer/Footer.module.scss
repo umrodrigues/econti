@@ -1,0 +1,52 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #013634;
+    padding: 2rem;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1 1 200px;
+    margin: 1rem;
+  
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  
+    svg {
+      cursor: pointer;
+  
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+  

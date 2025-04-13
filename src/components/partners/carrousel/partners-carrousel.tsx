@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from './PartnersCarrousel.module.scss';
-import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
 
 export default function PartnersCarrousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

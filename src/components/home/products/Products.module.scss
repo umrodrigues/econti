@@ -1,0 +1,28 @@
+.productsContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f0f0f0; // Cor de fundo geral, ajuste conforme necessário
+  }
+  
+  .productCard {
+    width: 30%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    h3 {
+      color: #007bff; // Cor do título, ajuste conforme necessário
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+  
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
