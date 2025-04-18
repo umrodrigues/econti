@@ -11,11 +11,11 @@ export default function Home() {
     <>
     <Header />
     <PartnersCount />
-    <PartnersCarrousel/>
-    <HomeContent/>
+    {/* <PartnersCarrousel/> */}
+    {/* <HomeContent/> */}
     <Products/>
     <Reviews/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 }

@@ -1,48 +1,55 @@
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import styles from './Reviews.module.scss';
 
+const StarRating = ({ rating }: { rating: number }) => {
+  return (
+    <div className={styles.stars}>
+      {Array.from({ length: 5 }).map((_, i) =>
+        i < rating ? <AiFillStar key={i} /> : <AiOutlineStar key={i} />
+      )}
+    </div>
+  );
+};
+
 export default function Reviews() {
+  const reviews = [
+    {
+      user: '@voluntopower',
+      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      rating: 5,
+    },
+    {
+      user: '@ongunidas',
+      text: 'Muito fácil de usar e com ótimos resultados. A &CONTI nos ajudou a encontrar voluntários para um evento super importante.',
+      rating: 5,
+    },
+    {
+      user: '@impactoativo',
+      text: 'Adoramos a proposta! A equipe é prestativa e a plataforma facilitou todo nosso processo de recrutamento voluntário.',
+      rating: 5,
+    },
+  ];
+
   return (
     <section className={styles.reviewsSection}>
       <h2 className={styles.title}>O que falam da &CONTI?</h2>
       <div className={styles.cardsContainer}>
-        <div className={`${styles.card} ${styles.orange}`}>
-          <p className={styles.user}>@soscasalimpa</p>
-          <p className={styles.text}>
-            Ola fortin&hasht;, da! SOS Casa<br />
-            dirige um detergente voltado<br />
-            a tecnologias e atmosferas, e<br />
-            necessidades sustentáveis. Menos<br />
-            realizar que não reprocessa
-          </p>
-          <div className={styles.stars}>★★★★★</div>
-        </div>
-
-        <div className={`${styles.card} ${styles.blue}`}>
-          <p className={styles.user}>@suraltdaweb.rs</p>
-          <p className={styles.text}>
-            A gerência por usanças e COPTI é<br />
-            recentemente parceira &CONTI e<br />
-            contribuída a amenar, bundar ou<br />
-            confeccionar serviços entre os<br />
-            carbonings gerando materiais<br />
-            bonitos! Né de tudo antes todas<br />
-            se significam.
-          </p>
-          <div className={styles.stars}>★★★★★</div>
-        </div>
-
-        <div className={`${styles.card} ${styles.lightBlue}`}>
-          <p className={styles.user}>@eliquerebemtotos</p>
-          <p className={styles.text}>
-            Resumida a primeira de portal<br />
-            de Portu&hasht; de fixar a esses<br />
-            frequentadores de uma economia.<br />
-            Chuquemente, resume-se a uma<br />
-            adesivagem de fricars torgens<br />
-            atencionando os likes ganhos.
-          </p>
-          <div className={styles.stars}>★★★★★</div>
-        </div>
+        {reviews.map((review, idx) => (
+          <div key={idx} className={styles.card}>
+            <div className={styles.cardInner}>
+              <p className={styles.user}>{review.user}</p>
+              <p className={styles.text}>
+                {review.text.split('. ').map((line, i) => (
+                  <span key={i}>
+                    {line.trim()}
+                    {i < review.text.split('. ').length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
+              <StarRating rating={review.rating} />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
