@@ -1,47 +1,69 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './PartnersCarrousel.module.scss';
 
 export default function PartnersCarrousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let scrollAmount = 0;
+    const speed = 0.3;
+
+    const step = () => {
+      if (!scrollContainer) return;
+
+      scrollAmount += speed;
+
+      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+        scrollAmount = 0;
+      }
+
+      scrollContainer.scrollLeft = scrollAmount;
+
+      requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+
+    return () => {};
+  }, []);
 
   const partners = [
     '/partners/TELECEVA GRENAL.png',
     '/partners/ACQUA.png',
     '/partners/MADEPOX.png',
     '/partners/PHARMACYONE.png',
+    '/partners/TELECEVA GRENAL.png',
+    '/partners/ACQUA.png',
+    '/partners/MADEPOX.png',
+    '/partners/PHARMACYONE.png',
+    '/partners/TELECEVA GRENAL.png',
+    '/partners/ACQUA.png',
+    '/partners/MADEPOX.png',
+    '/partners/PHARMACYONE.png',
   ];
-
-  const nextPartner = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % partners.length);
-  };
-
-  const prevPartner = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + partners.length) % partners.length
-    );
-  };
 
   return (
     <div className={styles.partnerCarrousel}>
-      <div className={styles.texto}>
-        <p>Expertise para atender os melhores</p>
-      </div>
-      <div className={styles.carrouselContainer}>
-        {/* <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={prevPartner}>
-          <HiArrowLeft />
-        </button> */}
-        <div className={styles.partnerImages} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+      <div className={styles.carrouselContainer} ref={scrollRef}>
+        <div className={styles.partnerImages}>
           {partners.map((partner, index) => (
             <div key={index} className={styles.partner}>
-              <Image src={partner} alt={`Partner ${index + 1}`} width={200} height={200} />
+              <Image
+                src={partner}
+                alt={`Partner ${index + 1}`}
+                width={200}
+                height={200}
+                style={{ objectFit: 'contain' }}
+                priority={index === 0}
+              />
             </div>
           ))}
         </div>
-        {/* <button className={`${styles.arrow} ${styles.arrowRight}`} onClick={nextPartner}>
-          <HiArrowRight />
-        </button> */}
       </div>
     </div>
   );
