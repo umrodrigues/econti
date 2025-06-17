@@ -28,6 +28,26 @@ export default function Reviews() {
       text: 'Adoramos a proposta! A equipe é prestativa e a plataforma facilitou todo nosso processo de recrutamento voluntário.',
       rating: 5,
     },
+    {
+      user: '@voluntopower',
+      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      rating: 5,
+    },
+    {
+      user: '@voluntopower',
+      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      rating: 5,
+    },
+    {
+      user: '@voluntopower',
+      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      rating: 5,
+    },
+    {
+      user: '@voluntopower',
+      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      rating: 5,
+    },
   ];
 
   return (

@@ -15,7 +15,7 @@ export default function Home() {
     <HomeContent/>
     <Products/>
     <Reviews/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 }

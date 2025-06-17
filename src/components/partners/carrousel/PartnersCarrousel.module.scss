@@ -3,12 +3,18 @@
   background-color: #f5f7fa;
   padding: 24px 0;
   user-select: none;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .carrouselContainer {
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.carrouselContainer::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
 .partnerImages {
