@@ -1,0 +1,45 @@
+.menuMobile {
+    nav {
+    background-color: #333;
+    padding: 10px;
+    }
+
+    ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    }
+
+    li {
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    background-color: #fff; 
+    }
+
+    a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 10px;
+
+    &:hover {
+        background-color: #555;
+        color: #fff; 
+    }
+    }
+
+    ul ul {
+    padding-left: 20px;
+    }
+
+    span {
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+    }
+    }
+}

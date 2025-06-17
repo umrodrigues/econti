@@ -1,0 +1,54 @@
+.headerMenuGroup {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  gap: 16px;
+}
+
+.menuGroup {
+  margin-bottom: 16px;
+  position: relative; 
+}
+
+.menuTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  cursor: pointer; 
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000; 
+}
+
+.menuItem {
+  margin: 0;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: #007bff;
+  display: block; 
+  padding: 8px 16px; 
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #f0f0f0;
+    color: #0056b3;
+  }
+}
+
+.menuGroup:hover .menuList {
+  display: block; 
+}

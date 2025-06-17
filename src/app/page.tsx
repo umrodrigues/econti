@@ -1,4 +1,4 @@
-import Footer from "@/components/footer/footer";
+import './packages/ui/styles/globals.scss';
 import Header from "@/components/header/header";
 import HomeContent from "@/components/home/home-content";
 import Products from "@/components/home/products/products";
@@ -15,7 +15,8 @@ export default function Home() {
     <HomeContent/>
     <Products/>
     <Reviews/>
-    {/* <Footer/> */}
     </>
   );
 }
+
+

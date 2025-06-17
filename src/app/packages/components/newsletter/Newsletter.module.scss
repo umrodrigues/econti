@@ -1,0 +1,71 @@
+@import '../../ui/styles/mixins.scss';
+
+.newsletterContainer {
+  background-color: #223457;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  gap: 12px;
+
+  @include media('m') {
+    flex-direction: row;
+  }
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin-top: 12px;
+  height: 40px;
+
+  @include media('m') {
+    margin-top: 0;
+    margin-left: 12px; 
+    margin-top: 26px;
+  }
+}
+
+.label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 8px;
+  box-sizing: border-box; 
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

@@ -1,0 +1,36 @@
+@import '../../ui/styles/mixins.scss';
+
+.image{
+    width: 60px;
+    height: 60px;
+    border-radius: 80%;
+
+    @include media('m') {
+    width: 80px;
+    height: 80px;
+    }
+    @include media('l') {
+        width: 100px;
+        height: 100px;
+        }
+}
+
+
+.brandsGroupContainer {
+    overflow-x: auto; 
+    white-space: nowrap; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none; 
+    display: flex;
+    justify-content: center;
+}
+
+.brandsGroupContainer::-webkit-scrollbar {
+    display: none; 
+}
+
+.brandsGroup {
+    display: inline-flex; 
+    gap: 16px;
+    padding: 20px; 
+}

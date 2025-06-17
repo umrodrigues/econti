@@ -1,0 +1,36 @@
+
+@import '../../ui/styles/mixins.scss';
+
+.gridContainer {
+    display: grid;
+    gap: 20px;
+    margin: 20px;
+
+    @include media('m') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .gridItem {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    height: 300px;
+  }
+  
+  .grid-item-1 {
+    grid-column: span 2;
+  }
+  
+  .grid-item-2 {
+    grid-row: span 2;
+  }
+  
+  .grid-item-3 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+
+  @include media('m') {
+}

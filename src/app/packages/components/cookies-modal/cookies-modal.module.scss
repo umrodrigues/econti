@@ -1,0 +1,100 @@
+@import '../../ui/styles/mixins.scss';
+
+.containerCookies {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+  box-shadow:
+    4px 3px 20px 4px #0000000d,
+    2px 2px 4px 0px #0000000d,
+    4px 4px 10px 0px #0000000d;
+
+  @include media('m') {
+    padding: 1.5rem;
+  }
+
+  @include media('l') {
+    padding: 1rem 1rem;
+    border-radius: 0;
+  }
+
+  
+}
+
+.wrapper {
+  @include media('l') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.description {
+  line-height: 1.4;
+  font-size: 0.875rem;
+  span {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  @include media('l') {
+    flex: 1;
+  }
+}
+
+.containerButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  gap: 7px;
+
+  @include media('m') {
+    height: 52px;
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+    button {
+      width: auto;
+    }
+
+    button:last-child {
+      margin-top: 0rem;
+    }
+  }
+
+  @include media('l') {
+    margin-top: 0rem;
+  }
+  
+  .buttonAccept {
+    width: 130px;
+    @include media('s') {
+      width: 160px;
+    }
+    @include media('m') {
+      width: 220px;
+      height: 60px;
+    }
+  
+  }
+  
+  .buttonReject {
+    width: 130px;
+    @include media('s') {
+      width: 160px;
+    }
+    @include media('m') {
+      width: 220px;
+      height: 60px;
+    }
+  }
+  
+}
