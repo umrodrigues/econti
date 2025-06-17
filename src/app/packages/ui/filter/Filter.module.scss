@@ -1,0 +1,31 @@
+.filterContainer {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    color: #8B6ED8;
+    padding: 8px;
+    background-color: #FEF7FF;
+    max-width: 300px;
+    border: 1px solid #8B6ED8;
+  }
+  
+  .icon {
+    color: #8B6ED8;
+    margin-left: 8px;
+  }
+  
+  .input {
+    border: none;
+    outline: none;
+    background-color: #FEF7FF;
+    flex: 1;
+    color: #8B6ED8;
+    font-size: 16px;
+  
+    &::placeholder {
+      color: #8B6ED8; 
+      opacity: 1; 
+    }
+  }
+  
+  

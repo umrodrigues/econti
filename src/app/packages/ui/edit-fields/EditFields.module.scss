@@ -1,0 +1,25 @@
+.editFieldContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .title {
+    margin-right: 8px;
+    font-weight: bold;
+    color: #79727a;
+  }
+  
+  .inputField {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #79727a;
+    border: none;
+    border-bottom: 2px solid #79727a;
+    background-color: transparent;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+  }
+  

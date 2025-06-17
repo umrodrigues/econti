@@ -1,0 +1,43 @@
+.inputWithIcon {
+    position: relative;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 2.5rem;
+  }
+  
+  .icon, .toggleButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .iconEye, .toggleButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+  }
+  
+
+  

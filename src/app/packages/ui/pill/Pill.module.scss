@@ -1,0 +1,20 @@
+.pill {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  
+    &.active {
+      background-color: var(--color-primary);
+      color: white;
+    }
+  
+    &.inactive {
+      background-color: #d4b6e3;
+      color: white;
+    }
+  }
+  

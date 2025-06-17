@@ -1,0 +1,46 @@
+.popoverContainer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .popover {
+    position: absolute;
+    background: #fff;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out;
+    
+    /* A posição do triângulo vai depender de onde você colocar o popover */
+    /* Esse exemplo coloca o triângulo em baixo centralizado */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px; /* Distância do triângulo ao popover */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #fff; /* Cor do triângulo, deve ser a mesma do fundo */
+    }
+  }
+  
+  .default {
+    border: 1px solid #ccc;
+  }
+  
+  .outlined {
+    border: 2px solid #007bff;
+    background: transparent;
+    color: #007bff;
+  }
+  
+  .filled {
+    background: #007bff;
+    color: white;
+  }
+  
