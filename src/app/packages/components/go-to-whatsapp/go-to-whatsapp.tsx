@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { AiOutlineWhatsApp } from 'react-icons/ai';
+import Image from 'next/image';
 import styles from './GoToWhatsapp.module.scss';
 
 export const GoToWhatsapp = () => {
@@ -13,9 +13,14 @@ export const GoToWhatsapp = () => {
       <button
         onClick={handleClick}
         className={styles.button}
-        aria-label="Ir para a conversa do WhatsApp"
+        aria-label="Falar com Bento no WhatsApp"
       >
-        <AiOutlineWhatsApp />
+        <Image
+          src="/home/bento.png"
+          alt="Foto do Bento"
+          fill
+          className={styles.avatar}
+        />
       </button>
       <div className={styles.message} onClick={handleClick}>
         Clique aqui para conversar conosco via WhatsApp!

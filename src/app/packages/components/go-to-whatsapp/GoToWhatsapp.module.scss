@@ -1,50 +1,41 @@
 .container {
-    position: fixed;
-    right: 0.5rem; 
-    bottom: 1.3rem; 
-    z-index: 100;
+  position: fixed;
+  right: 1rem;
+  bottom: 1.5rem;
+  z-index: 100;
 }
 
 .button {
-    cursor: pointer;
-    border-radius: 50%;
-    border: 1px solid #ffffff;
-    background: #25d366; 
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    padding: 12px;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &:hover {
+    transform: scale(1.05);
+  }
 
+  @media screen and (max-width: 768px) {
+    width: 64px;
+    height: 64px;
+  }
+
+  @media screen and (max-width: 480px) {
     width: 56px;
     height: 56px;
+  }
+}
 
-    svg {
-    width: 24px;
-    height: 24px;
-    fill: #ffffff; 
-    }
-
-    @media screen and (max-width: 768px) {
-    width: 48px;
-    height: 48px;
-
-    svg {
-        width: 20px;
-        height: 20px;
-    }
-    }
-
-    @media screen and (max-width: 480px) {
-    width: 44px;
-    height: 44px;
-
-    svg {
-        width: 18px;
-        height: 18px;
-    }
-    }
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .message {
@@ -66,4 +57,3 @@
     display: block; 
     }
 }
-

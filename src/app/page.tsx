@@ -5,6 +5,7 @@ import Products from "@/components/home/products/products";
 import Reviews from "@/components/home/reviews/reviews";
 import PartnersCarrousel from "@/components/partners/carrousel/partners-carrousel";
 import PartnersCount from "@/components/partners/partners-count/partners-count";
+import { GoToWhatsapp } from './packages/components/go-to-whatsapp/go-to-whatsapp';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     <HomeContent/>
     <Products/>
     <Reviews/>
+    <GoToWhatsapp/>
     </>
   );
 }
