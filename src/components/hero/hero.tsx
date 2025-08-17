@@ -157,7 +157,7 @@ export default function Hero() {
                 transition={{ 
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut" as const
                 }}
               ></motion.div>
               <motion.div 
@@ -169,7 +169,7 @@ export default function Hero() {
                 transition={{ 
                   duration: 5,
                   repeat: Infinity,
-                  ease: "easeInOut",
+                  ease: "easeInOut" as const,
                   delay: 1
                 }}
               ></motion.div>
@@ -182,7 +182,7 @@ export default function Hero() {
                 transition={{ 
                   duration: 6,
                   repeat: Infinity,
-                  ease: "easeInOut",
+                  ease: "easeInOut" as const,
                   delay: 2
                 }}
               ></motion.div>
@@ -195,7 +195,7 @@ export default function Hero() {
                 transition={{ 
                   duration: 4.5,
                   repeat: Infinity,
-                  ease: "easeInOut",
+                  ease: "easeInOut" as const,
                   delay: 0.5
                 }}
               ></motion.div>
