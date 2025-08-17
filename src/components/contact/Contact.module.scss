@@ -1,0 +1,253 @@
+@use "../../app/packages/ui/styles/mixins" as *;
+
+.contactSection {
+    padding: 80px 0;
+    background: var(--color-background);
+    
+    @include media('m') {
+        padding: 100px 0;
+    }
+    
+    @include media('l') {
+        padding: 120px 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    @include media('m') {
+        padding: 0 40px;
+    }
+    
+    @include media('l') {
+        padding: 0 60px;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+    
+    h2 {
+        font-size: 32px;
+        font-weight: 900;
+        color: var(--color-text);
+        margin-bottom: 16px;
+        line-height: 1.2;
+        
+        @include media('m') {
+            font-size: 40px;
+        }
+        
+        @include media('l') {
+            font-size: 48px;
+        }
+    }
+    
+    p {
+        font-size: 18px;
+        color: var(--color-text-light);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+        
+        @include media('l') {
+            font-size: 20px;
+        }
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    
+    @include media('l') {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+    }
+}
+
+.info {
+    h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--color-text);
+        margin-bottom: 20px;
+        
+        @include media('l') {
+            font-size: 32px;
+        }
+    }
+    
+    > p {
+        font-size: 18px;
+        color: var(--color-text-light);
+        line-height: 1.6;
+        margin-bottom: 40px;
+        
+        @include media('l') {
+            font-size: 20px;
+        }
+    }
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    
+    svg {
+        color: var(--color-primary);
+        font-size: 24px;
+        flex-shrink: 0;
+        margin-top: 4px;
+    }
+    
+    h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 8px;
+    }
+    
+    p {
+        font-size: 16px;
+        color: var(--color-text-light);
+        line-height: 1.5;
+    }
+}
+
+.formContainer {
+    background: var(--color-text-white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    
+    @include media('l') {
+        padding: 50px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    
+    @include media('m') {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-text);
+    }
+    
+    input,
+    textarea {
+        padding: 16px;
+        border: 2px solid #e1e5e9;
+        border-radius: 12px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        background: var(--color-text-white);
+        
+        &:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(139, 110, 218, 0.1);
+        }
+        
+        &::placeholder {
+            color: var(--color-text-light);
+        }
+    }
+    
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+}
+
+.submitButton {
+    height: 56px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    
+    &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.successMessage {
+    text-align: center;
+    padding: 40px 20px;
+    
+    svg {
+        font-size: 48px;
+        color: var(--color-success);
+        margin-bottom: 20px;
+    }
+    
+    h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--color-text);
+        margin-bottom: 16px;
+    }
+    
+    p {
+        font-size: 16px;
+        color: var(--color-text-light);
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    
+    .btn {
+        min-width: 200px;
+        height: 48px;
+    }
+}

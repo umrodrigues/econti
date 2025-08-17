@@ -10,32 +10,34 @@ export default function HomeContent() {
         </div>
         <div className={styles.right}>
           <h2>
-            Porque ter a <span className={styles.highlight}>&amp;CONTI</span> para<br />
-            gerenciar suas redes?
+            Sobre a <span className={styles.highlight}>&amp;Conti</span> Marketing Digital
           </h2>
+          <p className={styles.description}>
+            A &Conti Marketing Digital é uma empresa dedicada a impulsionar o crescimento do seu negócio por meio de soluções abrangentes em imagem, design, performance e audiovisual. Nosso compromisso é proporcionar excelência através de um atendimento personalizado, valorizando a proximidade e o relacionamento duradouro com nossos clientes. Com mais de 70 empresas parceiras já atendidas, focamos em entregar resultados que realmente caibam no seu bolso, tanto no ambiente online quanto offline.
+          </p>
           <div className={styles.cards}>
             <div className={styles.card}>
-              <h3>Somos especialistas</h3>
+              <h3>Marketing Digital e Offline</h3>
               <p>
-                Atuamos nas redes sociais de diversos nichos, de áreas institucionais a petshops, com conteúdos otimizados para engajar e fortalecer a presença da sua marca.
+                Soluções completas para presença e performance em ambos os ambientes, garantindo que sua marca tenha destaque tanto online quanto offline.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Constância</h3>
+              <h3>Atendimento Personalizado</h3>
               <p>
-                Reequilibramos as suas redes trazendo uma rotina precisa de postagens e conteúdos para atrair novos seguidores e manter os antigos.
+                Abordagem focada nas necessidades individuais de cada cliente, criando estratégias únicas que se alinham aos objetivos do seu negócio.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Análise</h3>
+              <h3>Gerenciamento Collab</h3>
               <p>
-                Reunimos e cruzamos dados e métricas para entender o comportamento do público e propor ações mais eficazes e estratégicas.
+                Nossa especialidade em gestão colaborativa de redes sociais, campanhas e estratégias de conteúdo que geram resultados mensuráveis.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Criatividade</h3>
+              <h3>Resultados Comprovados</h3>
               <p>
-                Aplicando referências visuais, ideias ilustrativas e formatos personalizados, criamos conteúdos com personalidade e foco direto.
+                Mais de 70 empresas parceiras já atendidas com sucesso, demonstrando nossa capacidade de entregar valor real e crescimento sustentável.
               </p>
             </div>
           </div>

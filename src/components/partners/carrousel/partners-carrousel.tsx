@@ -33,18 +33,18 @@ export default function PartnersCarrousel() {
   }, []);
 
   const partners = [
-    '/partners/TELECEVA GRENAL.png',
-    '/partners/ACQUA.png',
-    '/partners/MADEPOX.png',
-    '/partners/PHARMACYONE.png',
-    '/partners/TELECEVA GRENAL.png',
-    '/partners/ACQUA.png',
-    '/partners/MADEPOX.png',
-    '/partners/PHARMACYONE.png',
-    '/partners/TELECEVA GRENAL.png',
-    '/partners/ACQUA.png',
-    '/partners/MADEPOX.png',
-    '/partners/PHARMACYONE.png',
+    '/partners/gb_viamopolis.png',
+    '/partners/riverdaestalagem.png',
+    '/partners/barbeariaeneias.png',
+    '/partners/empresa1.png',
+    '/partners/empresa2.png',
+    '/partners/empresa3.png',
+    '/partners/gb_viamopolis.png',
+    '/partners/riverdaestalagem.png',
+    '/partners/barbeariaeneias.png',
+    '/partners/empresa1.png',
+    '/partners/empresa2.png',
+    '/partners/empresa3.png',
   ];
 
   return (

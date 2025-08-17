@@ -1,5 +1,4 @@
-
-@import '../../ui/styles/mixins.scss';
+@use '../../ui/styles/mixins' as *;
 
 .gridContainer {
     display: grid;
@@ -9,28 +8,24 @@
     @include media('m') {
       grid-template-columns: repeat(2, 1fr);
     }
-  }
+}
   
-  .gridItem {
+.gridItem {
     background-color: lightgray;
     padding: 20px;
     text-align: center;
     height: 300px;
-  }
+}
   
-  .grid-item-1 {
+.grid-item-1 {
     grid-column: span 2;
-  }
+}
   
-  .grid-item-2 {
+.grid-item-2 {
     grid-row: span 2;
-  }
+}
   
-  .grid-item-3 {
+.grid-item-3 {
     grid-column: span 2;
     grid-row: span 2;
-  }
-  
-
-  @include media('m') {
 }

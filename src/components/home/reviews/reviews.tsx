@@ -14,38 +14,33 @@ const StarRating = ({ rating }: { rating: number }) => {
 export default function Reviews() {
   const reviews = [
     {
-      user: '@voluntopower',
-      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      user: '@gb_viamopolis',
+      text: 'A &Conti transformou completamente nossa presença digital. O gerenciamento collab trouxe resultados incríveis para nosso negócio.',
       rating: 5,
     },
     {
-      user: '@ongunidas',
-      text: 'Muito fácil de usar e com ótimos resultados. A &CONTI nos ajudou a encontrar voluntários para um evento super importante.',
+      user: '@riverdaestalagem',
+      text: 'Excelente trabalho! A equipe da &Conti entendeu perfeitamente nossa identidade e criou estratégias que realmente funcionam.',
       rating: 5,
     },
     {
-      user: '@impactoativo',
-      text: 'Adoramos a proposta! A equipe é prestativa e a plataforma facilitou todo nosso processo de recrutamento voluntário.',
+      user: '@barbeariaeneiasdebittencourt',
+      text: 'Atendimento personalizado e resultados que superaram nossas expectativas. Recomendo muito a &Conti para qualquer empresa.',
       rating: 5,
     },
     {
-      user: '@voluntopower',
-      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      user: 'Cliente Satisfeito',
+      text: 'Mais de 70 empresas já foram atendidas pela &Conti. A experiência e profissionalismo fazem toda a diferença.',
       rating: 5,
     },
     {
-      user: '@voluntopower',
-      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      user: 'Empresa Parceira',
+      text: 'Soluções que realmente cabem no bolso e entregam resultados. A &Conti é nossa parceira de confiança.',
       rating: 5,
     },
     {
-      user: '@voluntopower',
-      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
-      rating: 5,
-    },
-    {
-      user: '@voluntopower',
-      text: 'Plataforma incrível! Conseguimos organizar nossa ação em tempo recorde. Os voluntários foram super engajados e preparados.',
+      user: 'Cliente Premium',
+      text: 'Marketing digital e offline integrados com excelência. A &Conti entende que cada negócio é único.',
       rating: 5,
     },
   ];

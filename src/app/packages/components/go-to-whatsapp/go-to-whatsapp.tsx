@@ -5,7 +5,7 @@ import styles from './GoToWhatsapp.module.scss';
 
 export const GoToWhatsapp = () => {
   const handleClick = () => {
-    window.open('https://api.whatsapp.com/send?phone=5551997791996', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=5511999999999&text=Olá! Gostaria de saber mais sobre os serviços da &Conti Marketing Digital.', '_blank');
   };
 
   return (
@@ -13,7 +13,7 @@ export const GoToWhatsapp = () => {
       <button
         onClick={handleClick}
         className={styles.button}
-        aria-label="Falar com Bento no WhatsApp"
+        aria-label="Falar com a &Conti no WhatsApp"
       >
         <Image
           src="/home/bento.png"

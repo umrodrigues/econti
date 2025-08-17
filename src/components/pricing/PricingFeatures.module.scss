@@ -1,0 +1,185 @@
+@use "../../app/packages/ui/styles/mixins" as *;
+
+.featuresSection {
+    padding: 80px 0;
+    background: var(--color-text-white);
+    
+    @include media('m') {
+        padding: 100px 0;
+    }
+    
+    @include media('l') {
+        padding: 120px 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    @include media('m') {
+        padding: 0 40px;
+    }
+    
+    @include media('l') {
+        padding: 0 60px;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+    
+    h2 {
+        font-size: 32px;
+        font-weight: 900;
+        color: var(--color-text);
+        margin-bottom: 16px;
+        line-height: 1.2;
+        
+        @include media('m') {
+            font-size: 40px;
+        }
+        
+        @include media('l') {
+            font-size: 48px;
+        }
+    }
+    
+    p {
+        font-size: 18px;
+        color: var(--color-text-light);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+        
+        @include media('l') {
+            font-size: 20px;
+        }
+    }
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 80px;
+    
+    @include media('m') {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    @include media('l') {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+.featureCard {
+    text-align: center;
+    padding: 40px 30px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    
+    @include media('l') {
+        padding: 50px 40px;
+    }
+    
+    &:hover {
+        border-color: var(--color-primary);
+        transform: translateY(-4px);
+    }
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: var(--color-text-white);
+    
+    svg {
+        font-size: 32px;
+    }
+}
+
+.featureCard h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 16px;
+    
+    @include media('l') {
+        font-size: 24px;
+    }
+}
+
+.featureCard p {
+    font-size: 16px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    
+    @include media('l') {
+        font-size: 18px;
+    }
+}
+
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-background) 0%, #f8f4ff 100%);
+    padding: 60px 40px;
+    border-radius: 20px;
+    
+    @include media('l') {
+        padding: 80px 60px;
+    }
+    
+    h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--color-text);
+        margin-bottom: 16px;
+        
+        @include media('l') {
+            font-size: 32px;
+        }
+    }
+    
+    p {
+        font-size: 18px;
+        color: var(--color-text-light);
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+        
+        @include media('l') {
+            font-size: 20px;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .btn {
+        min-width: 200px;
+        height: 56px;
+        
+        @include media('max-l') {
+            min-width: 180px;
+            height: 48px;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,159 @@
+@use "../../app/packages/ui/styles/mixins" as *;
+
+.portfolio {
+  padding: 80px 0;
+  background: var(--color-background);
+  
+  @include media('m') {
+    padding: 100px 0;
+  }
+  
+  @include media('l') {
+    padding: 120px 0;
+  }
+}
+
+.container {
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+  padding: 0 var(--margin-horizontal-default);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 16px;
+    
+    @include media('m') {
+      font-size: 3rem;
+    }
+    
+    @include media('l') {
+      font-size: 3.5rem;
+    }
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.cases {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 60px;
+  
+  @include media('m') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  
+  @include media('l') {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+.caseCard {
+  background: var(--color-text-white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(92, 107, 238, 0.1);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+  }
+}
+
+.caseHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+  .icon {
+    width: 48px;
+    height: 48px;
+    background: var(--color-primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-white);
+    font-size: 1.2rem;
+    margin-right: 16px;
+  }
+  
+  .clientInfo {
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 4px;
+    }
+    
+    .category {
+      font-size: 0.9rem;
+      color: var(--color-primary);
+      font-weight: 500;
+      background: rgba(92, 107, 238, 0.1);
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.caseContent {
+  .description {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  .results {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    .starIcon {
+      color: #FFD700;
+      font-size: 1rem;
+    }
+    
+    span {
+      font-size: 0.9rem;
+      color: var(--color-text);
+      font-weight: 500;
+    }
+  }
+}
+
+.cta {
+  text-align: center;
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+}

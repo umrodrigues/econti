@@ -1,30 +1,61 @@
+'use client';
+
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
 import styles from './Header.module.scss';
 
 export default function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
-                <Image src="/LOGO.png" alt="Logo &CONTI" width={200} height={200} />
-                <nav>
+                <div className={styles.logo}>
+                    <Image src="/LOGO.png" alt="Logo &CONTI" width={200} height={200} />
+                </div>
+                
+                <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
                     <ul className={styles.navList}>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Soluções</a></li>
-                        <li><a href="#">Conteúdo</a></li>
-                        <li><a href="#">Cases</a></li>
+                        <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+                        <li><a href="#sobre" onClick={() => setIsMenuOpen(false)}>Sobre</a></li>
+                        <li><a href="#solucoes" onClick={() => setIsMenuOpen(false)}>Soluções</a></li>
+                        <li><a href="#portfolio" onClick={() => setIsMenuOpen(false)}>Portfólio</a></li>
+                        <li><a href="#planos" onClick={() => setIsMenuOpen(false)}>Planos</a></li>
+                        <li><a href="#contato" onClick={() => setIsMenuOpen(false)}>Contato</a></li>
                     </ul>
                 </nav>
-                <a href="#" className={styles.button}>Faça já o seu Orçamento</a>
+                
+                <div className={styles.actions}>
+                    <a href="#contato" className={`${styles.button} btn btn--primary`}>
+                        Faça já o seu Orçamento
+                    </a>
+                    
+                    <button 
+                        className={styles.menuButton}
+                        onClick={toggleMenu}
+                        aria-label="Menu"
+                    >
+                        {isMenuOpen ? <FiX /> : <FiMenu />}
+                    </button>
+                </div>
             </div>
 
-            <div className={styles.contentWrapper}>
-                <div className={styles.containerPhone}>
-                    <h3>Soluções para o Marketing da sua empresa.</h3>
-                    <a href="#" className={styles.button}>Faça já o seu Orçamento</a>
-                </div>
-                <Image src="/celular.png" alt="&CONTI" width={812} height={812} className={styles.phoneImage} />
-            </div>
+
         </header>
     );
 }

@@ -11,8 +11,8 @@ export default function PartnersCount() {
 
   return (
     <div className={`${styles.container} ${visible ? styles.fadeIn : ""}`}>
-      <span className={styles.blue}>+ DE 150&nbsp;&nbsp;</span>
-      <span className={styles.white}>EMPRESAS ATENDIDAS</span>
+      <span className={styles.blue}>+ DE 70&nbsp;&nbsp;</span>
+      <span className={styles.white}>EMPRESAS PARCEIRAS</span>
     </div>
   );
 }
