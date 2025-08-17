@@ -1,54 +1,80 @@
 'use client';
 
-import Image from 'next/image';
-import { FiMail, FiPhone, FiMapPin, FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import { FiInstagram, FiMail, FiPhone } from 'react-icons/fi';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <div className={styles.content}>
-                    <div className={styles.section}>
+                <motion.div 
+                    className={styles.content}
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                >
+                    <motion.div className={styles.brandSection} variants={itemVariants}>
                         <div className={styles.logo}>
-                            <Image src="/LOGO.png" alt="Logo &CONTI" width={200} height={200} />
+                            <span className={styles.ampersand}>&</span>
+                            <span className={styles.brandName}>Conti</span>
                         </div>
-                        <p className={styles.description}>
-                            A &Conti Marketing Digital é dedicada a impulsionar o crescimento do seu negócio com soluções abrangentes em imagem, design, performance e audiovisual. Mais de 70 empresas parceiras atendidas.
+                        <p className={styles.tagline}>
+                            Transformando negócios através do marketing digital
                         </p>
                         <div className={styles.social}>
-                            <a href="https://instagram.com/econticomigo" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <motion.a 
+                                href="https://instagram.com/econticomigo" 
+                                aria-label="Instagram" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 <FiInstagram />
-                            </a>
+                            </motion.a>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className={styles.section}>
-                        <h3>Serviços</h3>
+                    <motion.div className={styles.linksSection} variants={itemVariants}>
+                        <h3>Links Rápidos</h3>
                         <ul>
-                            <li><a href="/#solucoes">Marketing Digital</a></li>
-                            <li><a href="/#solucoes">Gerenciamento Collab</a></li>
-                            <li><a href="/#solucoes">Design e Imagem</a></li>
-                            <li><a href="/#solucoes">Audiovisual</a></li>
-                            <li><a href="/#solucoes">Marketing Offline</a></li>
-                        </ul>
-                    </div>
-
-                    <div className={styles.section}>
-                        <h3>Empresa</h3>
-                        <ul>
-                            <li><a href="/#sobre">Sobre Nós</a></li>
+                            <li><a href="/#sobre">Sobre</a></li>
                             <li><a href="/portfolio">Portfólio</a></li>
                             <li><a href="/planos">Planos</a></li>
                             <li><a href="/contato">Contato</a></li>
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className={styles.section}>
+                    <motion.div className={styles.contactSection} variants={itemVariants}>
                         <h3>Contato</h3>
-                        <div className={styles.contact}>
+                        <div className={styles.contactInfo}>
                             <div className={styles.contactItem}>
                                 <FiPhone />
                                 <span>WhatsApp</span>
@@ -57,26 +83,33 @@ export default function Footer() {
                                 <FiMail />
                                 <span>contato@econti.com.br</span>
                             </div>
-                            <div className={styles.contactItem}>
-                                <FiMapPin />
-                                <span>@econticomigo</span>
-                            </div>
                         </div>
-                        <a href="/contato" className={`${styles.ctaButton} btn btn--primary`}>
+                        <motion.a 
+                            href="/contato" 
+                            className={styles.ctaButton}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
                             Fale Conosco
-                        </a>
-                    </div>
-                </div>
+                        </motion.a>
+                    </motion.div>
+                </motion.div>
 
-                <div className={styles.bottom}>
+                <motion.div 
+                    className={styles.bottom}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                >
                     <div className={styles.bottomContent}>
-                        <p>&copy; {currentYear} &CONTI. Todos os direitos reservados.</p>
+                        <p>&copy; {currentYear} &Conti. Todos os direitos reservados.</p>
                         <div className={styles.legal}>
-                            <a href="/privacidade">Política de Privacidade</a>
-                            <a href="/termos">Termos de Uso</a>
+                            <a href="/privacidade">Privacidade</a>
+                            <a href="/termos">Termos</a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </footer>
     );

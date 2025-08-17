@@ -34,14 +34,28 @@
   --shadow-lg: 0 10px 25px rgba(0,0,0,0.15), 0 3px 10px rgba(0,0,0,0.1);
   --shadow-xl: 0 20px 40px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.15);
 
-  & { 
-    @include media('l') {
-      --wrapper-width: 800px;
-    }
+  /* Responsividade */
+  @include media('s') {
+    --margin-horizontal-default: 1.5rem;
+  }
   
-    @include media('xl') {
-      --wrapper-width: 1268px;
-    }
+  @include media('m') {
+    --margin-horizontal-default: 2rem;
+  }
+  
+  @include media('l') {
+    --wrapper-width: 1024px;
+    --margin-horizontal-default: 2.5rem;
+  }
+  
+  @include media('xl') {
+    --wrapper-width: 1200px;
+    --margin-horizontal-default: 3rem;
+  }
+  
+  @include media('2xl') {
+    --wrapper-width: 1400px;
+    --margin-horizontal-default: 4rem;
   }
 }
 
@@ -145,20 +159,18 @@ button {
 
 
 .container {
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  @include media('l') {
-    max-width: calc(800px + 2rem);
-    margin: 0 auto;
-  }
+  padding-left: var(--margin-horizontal-default);
+  padding-right: var(--margin-horizontal-default);
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .containerDesk {
   @include media('l') {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: calc(800px + 2rem);
+    padding-left: var(--margin-horizontal-default);
+    padding-right: var(--margin-horizontal-default);
+    max-width: var(--wrapper-width);
     margin: 0 auto;
   }
 }
@@ -167,16 +179,27 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
+  padding: 12px 20px;
   border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  
+  @include media('s') {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+  
+  @include media('m') {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
   
   &::before {
     content: '';
@@ -242,14 +265,22 @@ button {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 60px 0;
   position: relative;
   
+  @include media('s') {
+    padding: 70px 0;
+  }
+  
   @include media('m') {
-    padding: 100px 0;
+    padding: 80px 0;
   }
   
   @include media('l') {
+    padding: 100px 0;
+  }
+  
+  @include media('xl') {
     padding: 120px 0;
   }
   
@@ -260,13 +291,23 @@ button {
 
 .card {
   background: var(--color-text-white);
-  border-radius: 20px;
-  padding: 32px;
+  border-radius: 16px;
+  padding: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(92, 107, 238, 0.05);
   position: relative;
   overflow: hidden;
+  
+  @include media('s') {
+    border-radius: 18px;
+    padding: 28px;
+  }
+  
+  @include media('m') {
+    border-radius: 20px;
+    padding: 32px;
+  }
   
   &::before {
     content: '';

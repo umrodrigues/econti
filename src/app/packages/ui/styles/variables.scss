@@ -19,7 +19,16 @@ $breakpoints: (
   '2xl': (
     min-width: 1440px,
   ),
+  'max-s': (
+    max-width: 374px,
+  ),
+  'max-m': (
+    max-width: 639px,
+  ),
   'max-l': (
-    max-width: 899px,
+    max-width: 1023px,
+  ),
+  'max-xl': (
+    max-width: 1359px,
   ),
 );
