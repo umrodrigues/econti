@@ -1,80 +1,139 @@
+@use "../../../app/packages/ui/styles/mixins" as *;
+
 .reviewsSection {
-  padding: 2rem;
+  padding: 4rem var(--margin-horizontal-default);
   text-align: center;
-  background-color: #f8f9fa;
-}
-
-.title {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  color: #1f1f1f;
-}
-
-.cardsContainer {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.card {
-  border-radius: 20px;
-  padding: 2px;
-  background: linear-gradient(
-    135deg,
-    #ff0000,
-    #ff7f00,
-    #ffff00,
-    #00ff00,
-    #0000ff,
-    #4b0082,
-    #8b00ff
-  );
-  max-width: 300px;
-  min-height: 300px;
-  display: flex;
-  flex: 1 1 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    filter: brightness(1.1) saturate(1.2);
+  background: linear-gradient(135deg, rgba(92, 107, 238, 0.02) 0%, rgba(20, 41, 72, 0.02) 100%);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%235C6BEE' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+  
+  @include media('m') {
+    padding: 5rem var(--margin-horizontal-default);
+  }
+  
+  @include media('l') {
+    padding: 6rem var(--margin-horizontal-default);
   }
 }
 
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--color-text);
+  position: relative;
+  z-index: 2;
+  
+  @include media('m') {
+    font-size: 3rem;
+  }
+  
+  @include media('l') {
+    font-size: 3.5rem;
+  }
+}
 
-.cardInner {
-  background: white;
-  border-radius: 18px;
-  padding: 1.5rem;
-  flex-grow: 1;
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  
+  @include media('m') {
+    gap: 2.5rem;
+  }
+  
+  @include media('l') {
+    gap: 3rem;
+  }
+}
+
+.card {
+  background: var(--color-text-white);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(92, 107, 238, 0.05);
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(92, 107, 238, 0.15);
+    border-color: rgba(92, 107, 238, 0.2);
+    
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.cardInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   text-align: left;
-  font-family: 'Arial', sans-serif;
 }
 
 .user {
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-  color: #333;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  &::before {
+    content: '"';
+    font-size: 2rem;
+    color: var(--color-primary);
+    opacity: 0.3;
+  }
 }
 
 .text {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #555;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .stars {
-  color: #ffc107;
-  font-size: 1.2rem;
-  margin-top: auto;
+  color: #FFD700;
+  font-size: 1.1rem;
+  display: flex;
+  gap: 2px;
 }

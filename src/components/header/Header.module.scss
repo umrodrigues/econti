@@ -61,13 +61,58 @@
 }
 
 .logo {
-    img {
-        object-fit: contain;
-        height: 40px;
-        width: auto;
+    .logoLink {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-1px);
+        }
+    }
+    
+    .logoText {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: 900;
+        font-size: 1.8rem;
+        line-height: 1;
         
         @include media('l') {
-            height: 50px;
+            font-size: 2rem;
+        }
+    }
+    
+    .ampersand {
+        color: var(--color-primary);
+        font-size: 2.2rem;
+        
+        @include media('l') {
+            font-size: 2.4rem;
+        }
+    }
+    
+    .conti {
+        color: var(--color-text-white);
+        background: linear-gradient(135deg, var(--color-text-white) 0%, rgba(255, 255, 255, 0.8) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .logoSubtitle {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 2px;
+        
+        @include media('l') {
+            font-size: 0.8rem;
         }
     }
 }

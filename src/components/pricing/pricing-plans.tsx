@@ -82,7 +82,7 @@ export default function PricingPlans() {
   };
 
   return (
-    <section className={styles.pricingSection} id="planos">
+    <section className={styles.pricingSection}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h1 className="animate-fade-in">

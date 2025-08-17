@@ -32,10 +32,10 @@ export default function Hero() {
             </div>
             
             <div className={styles.buttons}>
-              <a href="#contato" className="btn btn--primary">
+              <a href="/contato" className="btn btn--primary">
                 Faça seu Orçamento
               </a>
-              <a href="#portfolio" className="btn btn--outline">
+              <a href="/portfolio" className="btn btn--outline">
                 Ver Portfólio
               </a>
             </div>

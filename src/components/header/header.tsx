@@ -26,22 +26,28 @@ export default function Header() {
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <Image src="/LOGO.png" alt="Logo &CONTI" width={200} height={200} />
+                    <a href="/" className={styles.logoLink}>
+                        <span className={styles.logoText}>
+                            <span className={styles.ampersand}>&</span>
+                            <span className={styles.conti}>Conti</span>
+                        </span>
+                        <span className={styles.logoSubtitle}>Marketing Digital</span>
+                    </a>
                 </div>
                 
                 <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
                     <ul className={styles.navList}>
-                        <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-                        <li><a href="#sobre" onClick={() => setIsMenuOpen(false)}>Sobre</a></li>
-                        <li><a href="#solucoes" onClick={() => setIsMenuOpen(false)}>Soluções</a></li>
-                        <li><a href="#portfolio" onClick={() => setIsMenuOpen(false)}>Portfólio</a></li>
-                        <li><a href="#planos" onClick={() => setIsMenuOpen(false)}>Planos</a></li>
-                        <li><a href="#contato" onClick={() => setIsMenuOpen(false)}>Contato</a></li>
+                        <li><a href="/" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+                        <li><a href="/#sobre" onClick={() => setIsMenuOpen(false)}>Sobre</a></li>
+                        <li><a href="/#solucoes" onClick={() => setIsMenuOpen(false)}>Soluções</a></li>
+                        <li><a href="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfólio</a></li>
+                        <li><a href="/planos" onClick={() => setIsMenuOpen(false)}>Planos</a></li>
+                        <li><a href="/contato" onClick={() => setIsMenuOpen(false)}>Contato</a></li>
                     </ul>
                 </nav>
                 
                 <div className={styles.actions}>
-                    <a href="#contato" className={`${styles.button} btn btn--primary`}>
+                    <a href="/contato" className={`${styles.button} btn btn--primary`}>
                         Faça já o seu Orçamento
                     </a>
                     

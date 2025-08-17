@@ -1,4 +1,4 @@
-import { FiTrendingUp, FiUsers, FiBarChart3, FiAward, FiClock, FiShield } from 'react-icons/fi';
+import { FiTrendingUp, FiUsers, FiBarChart, FiAward, FiClock, FiShield } from 'react-icons/fi';
 import styles from './PricingFeatures.module.scss';
 
 const features = [
@@ -13,7 +13,7 @@ const features = [
     description: 'Profissionais certificados em marketing digital e redes sociais'
   },
   {
-    icon: FiBarChart3,
+    icon: FiBarChart,
     title: 'Relatórios Detalhados',
     description: 'Acompanhe seu progresso com métricas e análises em tempo real'
   },
@@ -65,10 +65,10 @@ export default function PricingFeatures() {
           <h3>Pronto para transformar sua presença digital?</h3>
           <p>Entre em contato conosco e descubra como podemos ajudar seu negócio a crescer</p>
           <div className={styles.buttons}>
-            <a href="#planos" className="btn btn--primary">
+            <a href="/planos" className="btn btn--primary">
               Ver Planos
             </a>
-            <a href="#contato" className="btn btn--outline">
+            <a href="/contato" className="btn btn--outline">
               Falar com Especialista
             </a>
           </div>

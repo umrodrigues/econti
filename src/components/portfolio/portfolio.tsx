@@ -62,9 +62,9 @@ export default function Portfolio() {
         </div>
         
         <div className={styles.cta}>
-          <p>Quer ver mais resultados? Acesse nosso portfólio completo</p>
-          <a href="#contato" className="btn btn--primary">
-            Solicitar Portfólio Completo
+          <p>Quer ver mais resultados? Entre em contato conosco</p>
+          <a href="/contato" className="btn btn--primary">
+            Solicitar Orçamento
           </a>
         </div>
       </div>

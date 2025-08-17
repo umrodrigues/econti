@@ -28,21 +28,21 @@ export default function Footer() {
                     <div className={styles.section}>
                         <h3>Serviços</h3>
                         <ul>
-                            <li><a href="#solucoes">Marketing Digital</a></li>
-                            <li><a href="#solucoes">Gerenciamento Collab</a></li>
-                            <li><a href="#solucoes">Design e Imagem</a></li>
-                            <li><a href="#solucoes">Audiovisual</a></li>
-                            <li><a href="#solucoes">Marketing Offline</a></li>
+                            <li><a href="/#solucoes">Marketing Digital</a></li>
+                            <li><a href="/#solucoes">Gerenciamento Collab</a></li>
+                            <li><a href="/#solucoes">Design e Imagem</a></li>
+                            <li><a href="/#solucoes">Audiovisual</a></li>
+                            <li><a href="/#solucoes">Marketing Offline</a></li>
                         </ul>
                     </div>
 
                     <div className={styles.section}>
                         <h3>Empresa</h3>
                         <ul>
-                            <li><a href="#sobre">Sobre Nós</a></li>
-                            <li><a href="#portfolio">Portfólio</a></li>
-                            <li><a href="#planos">Planos</a></li>
-                            <li><a href="#contato">Contato</a></li>
+                            <li><a href="/#sobre">Sobre Nós</a></li>
+                            <li><a href="/portfolio">Portfólio</a></li>
+                            <li><a href="/planos">Planos</a></li>
+                            <li><a href="/contato">Contato</a></li>
                         </ul>
                     </div>
 
@@ -62,7 +62,7 @@ export default function Footer() {
                                 <span>@econticomigo</span>
                             </div>
                         </div>
-                        <a href="#contato" className={`${styles.ctaButton} btn btn--primary`}>
+                        <a href="/contato" className={`${styles.ctaButton} btn btn--primary`}>
                             Fale Conosco
                         </a>
                     </div>
