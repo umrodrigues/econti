@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -20,18 +21,18 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex space-x-8 mb-8 md:mb-0">
-            <a href="#sobre" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+            <Link href="/" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+              Início
+            </Link>
+            <Link href="/sobre" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
               Sobre
-            </a>
-            <a href="#servicos" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
-              Serviços
-            </a>
+            </Link>
             <a href="#portfolio" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
               Portfólio
             </a>
-            <a href="#contato" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+            <Link href="/contato" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
               Contato
-            </a>
+            </Link>
           </div>
 
           {/* Social Media */}

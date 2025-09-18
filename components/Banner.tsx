@@ -32,7 +32,9 @@ export default function Banner() {
           {/* Botão CTA */}
           <div className="pt-8">
             <a 
-              href="#contato"
+              href="https://wa.me/5551997791996?text=Olá! Gostaria de saber mais sobre os serviços da &Conti."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xl font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Vamos Conversar!

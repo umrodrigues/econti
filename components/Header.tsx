@@ -1,18 +1,19 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+    <header className="absolute top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Menu Esquerdo */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#sobre" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
+            <Link href="/" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
+              Início
+            </Link>
+            <Link href="/sobre" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
               Sobre
-            </a>
-            <a href="#servicos" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
-              Serviços
-            </a>
+            </Link>
             <a href="#portfolio" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
               Portfólio
             </a>
@@ -20,26 +21,28 @@ export default function Header() {
 
           {/* Logo Central */}
           <div className="flex-shrink-0">
-            <Image
-              src="/logo.png"
-              alt="&Conti Logo"
-              width={120}
-              height={60}
-              className="h-12 lg:h-16 w-auto"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="&Conti Logo"
+                width={120}
+                height={60}
+                className="h-12 lg:h-16 w-auto"
+                priority
+              />
+            </Link>
           </div>
 
           {/* Menu Direito */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#contato" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
+            <Link href="/contato" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
               Contato
-            </a>
-            <a href="#blog" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
-              Blog
-            </a>
+            </Link>
+            
             <a 
-              href="#orcamento" 
+              href="https://wa.me/5551997791996?text=Olá! Gostaria de saber mais sobre os serviços da &Conti."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium"
             >
               Orçamento
