@@ -9,6 +9,7 @@ export default function AdminPage() {
   const [proposta, setProposta] = useState<Proposta | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
     const carregarProposta = async () => {
