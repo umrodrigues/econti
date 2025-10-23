@@ -37,8 +37,14 @@ export default function OrcamentosPage() {
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
                 <p className="text-gray-600 text-sm font-medium mb-2">{stat.label}</p>
-                <p className={`text-3xl font-bold text-${stat.cor}-600`}>{stat.valor}</p>
-                <div className={`w-full h-1 bg-${stat.cor}-200 rounded-full mt-4`} />
+                <p style={{ color: stat.cor === 'blue' ? '#2563eb' : stat.cor === 'green' ? '#16a34a' : stat.cor === 'yellow' ? '#ca8a04' : '#dc2626', fontSize: '1.875rem', fontWeight: 'bold' }}>{stat.valor}</p>
+                <div style={{ 
+                  width: '100%', 
+                  height: '4px', 
+                  backgroundColor: stat.cor === 'blue' ? '#dbeafe' : stat.cor === 'green' ? '#dcfce7' : stat.cor === 'yellow' ? '#fef08a' : '#fee2e2',
+                  borderRadius: '9999px',
+                  marginTop: '1rem'
+                }} />
               </div>
             ))}
           </div>

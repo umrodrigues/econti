@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Orcamento } from '@/types/proposal';
 
-let orcamentos: Orcamento[] = [];
+const orcamentos: Orcamento[] = [];
 
 export async function GET() {
   try {
@@ -23,8 +23,8 @@ export async function POST(request: NextRequest) {
     const orcamento = await request.json() as Orcamento;
 
     const novoOrcamento: Orcamento = {
-      id: `orcamento-${Date.now()}`,
       ...orcamento,
+      id: `orcamento-${Date.now()}`,
       data_criacao: new Date().toISOString()
     };
 

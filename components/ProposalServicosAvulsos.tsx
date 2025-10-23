@@ -37,7 +37,7 @@ export default function ProposalServicosAvulsos({ servicos, onAdicionarAoOrcamen
   }, [servicosFiltrados]);
 
   const categoriasComServicos = Object.entries(agrupadosPorCategoria)
-    .filter(([_, items]) => items.length > 0)
+    .filter(([, items]) => items.length > 0)
     .map(([cat]) => cat);
 
   const renderCategoria = (categoria: string, servicos: ServicoAvulso[]) => {

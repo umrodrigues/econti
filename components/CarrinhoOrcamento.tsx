@@ -89,7 +89,7 @@ export default function CarrinhoOrcamento({
 
                     {item.anotacao && (
                       <p className="text-xs text-gray-600 italic mb-2 p-2 bg-white rounded">
-                        "{item.anotacao}"
+                        &quot;{item.anotacao}&quot;
                       </p>
                     )}
 
