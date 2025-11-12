@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
+    <header className="absolute inset-x-0 top-6 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center py-4 md:py-6">
           {/* Menu Esquerdo */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex flex-1 items-center justify-start gap-10">
             <Link href="/" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
               Início
             </Link>
@@ -20,21 +20,21 @@ export default function Header() {
           </nav>
 
           {/* Logo Central */}
-          <div className="flex-shrink-0">
+          <div className="flex flex-1 justify-center md:flex-none">
             <Link href="/">
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="&Conti Logo"
-                width={120}
-                height={60}
-                className="h-12 lg:h-16 w-auto"
+                width={220}
+                height={100}
+                className="h-16 md:h-20 w-auto"
                 priority
               />
             </Link>
           </div>
 
           {/* Menu Direito */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex flex-1 items-center justify-end gap-10">
             <Link href="/contato" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
               Contato
             </Link>
@@ -50,7 +50,7 @@ export default function Header() {
           </nav>
 
           {/* Menu Mobile */}
-          <div className="md:hidden">
+          <div className="md:hidden flex flex-1 justify-end">
             <button className="text-white hover:text-blue-300 transition-colors duration-200">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
