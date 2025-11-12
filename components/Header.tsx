@@ -6,21 +6,19 @@ export default function Header() {
     <header className="absolute inset-x-0 top-6 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center py-4 md:py-6">
-          {/* Menu Esquerdo */}
-          <nav className="hidden md:flex flex-1 items-center justify-start gap-10">
-            <Link href="/" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
+          <nav className="hidden md:flex basis-[35%] items-center justify-end gap-8 text-lg font-medium">
+            <Link href="/" className="text-white hover:text-blue-300 transition-colors duration-200">
               Início
             </Link>
-            <Link href="/sobre" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
+            <Link href="/sobre" className="text-white hover:text-blue-300 transition-colors duration-200">
               Sobre
             </Link>
-            <a href="#portfolio" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
+            <a href="#portfolio" className="text-white hover:text-blue-300 transition-colors duration-200">
               Portfólio
             </a>
           </nav>
 
-          {/* Logo Central */}
-          <div className="flex flex-1 justify-center md:flex-none">
+          <div className="flex flex-1 justify-center md:flex-none md:basis-[30%]">
             <Link href="/">
               <Image
                 src="/logo2.png"
@@ -33,9 +31,8 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Menu Direito */}
-          <nav className="hidden md:flex flex-1 items-center justify-end gap-10">
-            <Link href="/contato" className="text-white hover:text-blue-300 transition-colors duration-200 font-medium">
+          <nav className="hidden md:flex basis-[35%] items-center justify-start gap-8 text-lg font-medium">
+            <Link href="/contato" className="text-white hover:text-blue-300 transition-colors duration-200">
               Contato
             </Link>
             
@@ -43,13 +40,12 @@ export default function Header() {
               href="https://wa.me/5551997791996?text=Olá! Gostaria de saber mais sobre os serviços da &Conti."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors duration-200 font-semibold"
             >
               Orçamento
             </a>
           </nav>
 
-          {/* Menu Mobile */}
           <div className="md:hidden flex flex-1 justify-end">
             <button className="text-white hover:text-blue-300 transition-colors duration-200">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
